@@ -47,20 +47,23 @@ canvas {
   justify-content: center;
   gap: 5px;
 }
-
-/* button {
-  padding: 10px 20px;
-  margin: 0 10px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+#screenshot-button{
+  background: greenyellow;
 }
-
+#screenshot-button:hover{
+  background: rgb(155, 231, 42);
+}
+button{
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  border: 1px solid gray;
+  cursor: pointer;
+  /* background: cornflowerblue; */
+  font-size: 14px;
+}
 button:hover {
-  background-color: #45a049;
-} */
+  background: rgb(206, 206, 206);
+}
 .adjust-settings-container{
   display: flex;
   flex-direction: column;
@@ -90,4 +93,26 @@ select{
 .footer-container a{
   /* text-decoration: none; */
   color: orange
+}
+
+@media screen and (max-width: 599px) {
+  #button-container{
+    width: fit-content;
+    flex-direction: column;
+    gap: 7px;
+  }
+  .adjust-settings-container {
+    margin: 0;
+    margin-top: 0;
+  }
+  .buttons-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+@media screen and (max-width:366px) {
+  button{
+    font-size: 12px;
+    padding: 0.2rem 0.4rem;
+  }
 }

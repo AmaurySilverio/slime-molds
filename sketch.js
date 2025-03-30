@@ -142,6 +142,7 @@ function toggleFullscreen() {
     fullscreenSettings.style.borderRadius = "10px";
     fullscreenSettings.style.transition = "opacity 0.5s ease-in-out"; // Smooth transition
     fullscreenSettings.style.opacity = "1";
+    fullscreenSettings.style.width = "max-content";
 
     fullscreenSettings.appendChild(buttonContainer);
     // fullscreenSettings.appendChild(settingsContainer);
@@ -158,15 +159,15 @@ function toggleFullscreen() {
 
     // Adjust settings container styling
     settingsContainer.style.position = "absolute";
-    settingsContainer.style.bottom = "50px"; // Right above the settings button
-    settingsContainer.style.left = "67%";
+    settingsContainer.style.bottom = "61px"; // Right above the settings button
+    settingsContainer.style.left = "75%";
     // settingsContainer.style.transform = "translateX(-50%)";
     settingsContainer.style.background = "rgba(0, 0, 0, 0.7)";
     settingsContainer.style.padding = "10px";
     settingsContainer.style.borderRadius = "8px";
     // settingsContainer.style.color = "white";
     settingsContainer.style.display = "none"; // Hidden by default
-    settingsContainer.style.zIndex = "1002";
+    settingsContainer.style.zIndex = "11";
 
     fullscreenSettings.appendChild(settingsContainer);
     document.body.appendChild(fullscreenSettings);
@@ -189,6 +190,7 @@ function toggleFullscreen() {
     resizeCanvas(windowWidth, windowHeight);
   } else {
     fullscreenBtn.innerText = "Full Screen";
+
     // Exiting fullscreen: Show UI elements again
     uiElements.forEach((el) => el.style.removeProperty("display"));
 
@@ -198,7 +200,7 @@ function toggleFullscreen() {
     canvasContainer.style.width = "";
     canvasContainer.style.height = "";
 
-    let contentWrapper = document.querySelector(".content-wrapper"); // Adjust this selector based on your layout
+    let contentWrapper = document.querySelector(".buttons-wrapper");
     contentWrapper.appendChild(buttonContainer);
     contentWrapper.appendChild(settingsContainer);
 
@@ -311,7 +313,6 @@ document
   .getElementById("background-color")
   .addEventListener("change", function (event) {
     bgColor = event.target.value || "rgba(70, 56, 31, 0.02)"; // Default to green if no selection
-    console.log(bgColor);
   });
 
 document
