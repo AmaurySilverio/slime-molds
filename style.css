@@ -16,7 +16,11 @@ body{
   grid-template-columns: minmax(0, 1fr);
   justify-items: center;
 }
-
+.content-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 /* #canvas-container {
   width: 600px;
   height: 400px;
@@ -91,6 +95,9 @@ select{
 }
 
 @media screen and (max-width: 599px) {
+  .content-wrapper{
+    display: block;
+  }
   #button-container{
     width: fit-content;
     flex-direction: column;
