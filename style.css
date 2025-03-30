@@ -1,0 +1,93 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+}
+/* body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-direction: column;
+} */
+body{
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
+}
+
+/* #canvas-container {
+  width: 600px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+canvas {
+  /* width: 100%; */
+  /* height: auto; */
+  /* max-width: 600px;
+  max-height: 400px;
+  min-width: 320px;
+  min-height: 213.333px; */
+  margin-bottom: 20px;
+  aspect-ratio: 3 / 2;
+  transition: all 0.1s ease; 
+}
+#button-container {
+  /* margin-top: 20px;  */
+  /* padding: 15px; */
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+/* button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+} */
+.adjust-settings-container{
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 12px;
+}
+select{
+  margin-bottom: 10px;
+}
+
+#fullscreen-ui {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#fullscreen-ui.hide {
+  opacity: 0;
+}
+
+/* Prevent hiding while hovering over the adjust-settings-container */
+.adjust-settings-container:hover + #fullscreen-ui,
+#fullscreen-ui:hover {
+  opacity: 1 !important;
+}
+
+.footer-container a{
+  /* text-decoration: none; */
+  color: orange
+}

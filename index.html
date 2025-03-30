@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Slime Molds</title>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script src="libraries/p5.min.js"></script>
+  <script src="libraries/p5.sound.min.js"></script>
+</head>
+
+<body>
+  <h1><a target="_blank" href="">What Are Slime Molds?</a></h1>
+  <div class="content-wrapper">
+    <div id="canvas-container"></div>
+
+    <div id="button-container">
+      <!-- <button id="start-btn">Start</button>
+    <button id="stop-btn">Stop</button> -->
+      <button id="play-toggle-btn">Stop</button>
+      <button id="restartCenter">Restart From Center</button>
+      <button id="restartEverywhere">Restart From Random</button>
+      <button id="screenshot-button">Take Screenshot</button>
+      <button id="fullscreen-btn">Full Screen</button>
+    </div>
+
+    <div class="adjust-settings-container">
+      <label for="mold-color">Select Mold Color:</label>
+      <select name="colors" id="mold-color">
+        <option value="white">White</option>
+        <option value="red">Red</option>
+        <option value="cornflowerblue">Blue</option>
+        <option value="orange">Orange</option>
+        <option value="yellow">Yellow</option>
+        <option value="lightgreen">Green</option>
+        <option value="purple">Purple</option>
+      </select>
+
+      <label for="background-color">Select Background Color:</label>
+      <select name="background-colors" id="background-color">
+        <option value="">Green</option>
+        <option value="rgba(0, 0, 0, 0.02)">Black</option>
+      </select>
+
+      <label for="mold-size">Select Mold Size:</label>
+      <select name="mold-size" id="mold-size">
+        <option value="0.5">Tiny</option>
+        <option value="2">Small</option>
+        <option value="5">Medium</option>
+        <option value="10">Large</option>
+        <option value="15">XL</option>
+      </select>
+
+      <label for="mold-quantity">Select Number of Slime Molds:</label>
+      <input name="mold-quantity" id="mold-quantity" type="number" min="1" max="40000" value="5000">
+    </div>
+  </div>
+  <div class="footer-container">
+    <p>Made by <a target="_blank" href="https://amaurycodes.onrender.com/">Amaury</a></p>
+  </div>
+  <script src="sketch.js"></script>
+  <script src="mold.js"></script>
+</body>
+
+</html>
