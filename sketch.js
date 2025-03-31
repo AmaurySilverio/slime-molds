@@ -108,7 +108,7 @@ function toggleFullscreen() {
   fullscreen(!fs); // Toggle fullscreen mode
 
   let canvasContainer = document.getElementById("canvas-container");
-  let uiElements = document.querySelectorAll("h1");
+  let uiElements = document.querySelectorAll("h1, .footer-container");
   let buttonContainer = document.getElementById("button-container");
   let settingsContainer = document.querySelector(".adjust-settings-container");
   let labels = document.querySelectorAll(".adjust-settings-container label");
