@@ -273,8 +273,9 @@ function restartCenter() {
     molds[i] = new Mold(); // Reinitialize molds
   }
 
+  isRunning = true;
+  document.getElementById("play-toggle-btn").innerText = "Stop";
   loop(); // Restart the loop
-  console.log("Canvas Restarted");
 }
 
 function restartEverywhere() {
@@ -291,8 +292,9 @@ function restartEverywhere() {
     molds[i] = new Mold(true); // Reinitialize molds
   }
 
+  isRunning = true;
+  document.getElementById("play-toggle-btn").innerText = "Stop";
   loop(); // Restart the loop
-  console.log("Canvas Restarted");
 }
 
 function updateMoldQuantity(newQuantity) {

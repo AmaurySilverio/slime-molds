@@ -20,9 +20,11 @@
 </head>
 
 <body>
-  <h1><a target="_blank"
+  <!-- <h1><a target="_blank"
       href="https://docs.google.com/document/d/1XhsflvxbMg2dRjcSj_qfM57_VqlAT3WLMwqFG1X9XkQ/edit?usp=sharing">What Are
-      Slime Molds?</a></h1>
+      Slime Molds?</a></h1> -->
+  <h1 id="info-btn">What Are
+    Slime Molds?</h1>
   <div class="content-wrapper">
     <div id="canvas-container"></div>
     <div class="buttons-wrapper">
@@ -68,9 +70,39 @@
       </div>
     </div>
   </div>
+  <dialog id="info-dialog">
+    <h2>What Are Slime Molds?</h2>
+    <p>
+      Slime molds are fascinating, single-celled organisms that exhibit
+      intelligent behavior despite lacking a brain. They move, solve mazes,
+      and form intricate networks to find food.
+    </p>
+    <h2>Resources for learning about Slime Molds (Physarum polycephalum):</h2>
+
+    <ul>
+      <li>Physarum polycephalum Wiki: <a href="https://en.wikipedia.org/wiki/Physarum_polycephalum"
+          target="_blank">Physarum polycephalum - Wikipedia</a> </li>
+      <li>Introductory Video on Slime Molds: <a href="https://www.youtube.com/watch?v=nPOQQp8CCls" target="_blank">The
+          Insane Biology of: Slime Mold</a></li>
+      <li>Journey to the MicroCosmos Video on Slime Molds: Slime Molds: <a
+          href="https://www.youtube.com/watch?v=elqwn7k2Wwk" target="_blank">When Micro Becomes
+          Macro</a></li>
+      <li>The slime mold visualizer was created using an algorithm by Jeff Jones: <a
+          href="https://uwe-repository.worktribe.com/output/980579/characteristics-of-pattern-formation-and-evolution-in-approximations-of-physarum-transport-networks"
+          target="_blank">Characteristics of pattern formation
+          and evolution in approximations of physarum transport networks </a></li>
+      <li>This article by Sage Jenson breaks down Jeff’s algorithm in a very accessible way: <a
+          href="https://cargocollective.com/sagejenson/physarum" target="_blank">physarum - Sage Jenson</a>
+      </li>
+    </ul>
+    <div class="close-button-container">
+      <button id="close-dialog">Close</button>
+    </div>
+  </dialog>
   <div class="footer-container">
     <p>Made by <a target="_blank" href="https://amaurycodes.onrender.com/">Amaury</a></p>
   </div>
+  <script src="dialog.js"></script>
   <script src="sketch.js"></script>
   <script src="mold.js"></script>
 </body>
