@@ -13,10 +13,6 @@ let bgColor = "rgba(70, 56, 31, 0.02)";
 function setup() {
   cnv = createCanvas(baseWidth, baseHeight);
   cnv.parent("canvas-container");
-  // let newCanvasX = (windowWidth - width) / 2;
-  // let newCanvasY = 100;
-  // cnv.position(newCanvasX, newCanvasY);
-  // windowResized();
 
   angleMode(DEGREES);
   d = pixelDensity();
@@ -26,14 +22,10 @@ function setup() {
   }
   // Button functionality
   const togglePlayButton = document.getElementById("play-toggle-btn");
-  // const startButton = select("#start-btn");
-  // const stopButton = select("#stop-btn");
   const restartCenterBtn = select("#restartCenter");
   const restartEverywhereBtn = select("#restartEverywhere");
   const fullscreenBtn = select("#fullscreen-btn");
 
-  // startButton.mousePressed(() => keyPressed("true"));
-  // stopButton.mousePressed(() => keyPressed("false"));
   togglePlayButton.addEventListener("click", togglePlayPause);
 
   restartCenterBtn.mousePressed(restartCenter);
@@ -42,12 +34,6 @@ function setup() {
 }
 
 function draw() {
-  //black
-  // background("rgba(0, 0, 0, 0.02)");
-  // background(0, 5);
-  // background("rgba(138, 154, 91, 0.1)");
-  //the slaps brown + white
-  // background("rgba(164, 121, 100, 0.02)");
   if (bgColor) {
     background(bgColor);
   } else {
@@ -138,14 +124,12 @@ function toggleFullscreen() {
     fullscreenSettings.style.zIndex = "10";
     fullscreenSettings.style.background = "rgba(0, 0, 0, 0.5)";
     fullscreenSettings.style.padding = "15px";
-    // fullscreenSettings.style.marginTop = "0px";
     fullscreenSettings.style.borderRadius = "10px";
     fullscreenSettings.style.transition = "opacity 0.5s ease-in-out"; // Smooth transition
     fullscreenSettings.style.opacity = "1";
     fullscreenSettings.style.width = "max-content";
 
     fullscreenSettings.appendChild(buttonContainer);
-    // fullscreenSettings.appendChild(settingsContainer);
 
     // Create "Settings" button if it doesn't exist
     if (!settingsButton) {
@@ -159,25 +143,16 @@ function toggleFullscreen() {
 
     // Adjust settings container styling
     settingsContainer.style.position = "absolute";
-    settingsContainer.style.bottom = "61px"; // Right above the settings button
+    settingsContainer.style.bottom = "61px";
     settingsContainer.style.left = "75%";
-    // settingsContainer.style.transform = "translateX(-50%)";
     settingsContainer.style.background = "rgba(0, 0, 0, 0.7)";
     settingsContainer.style.padding = "10px";
     settingsContainer.style.borderRadius = "8px";
-    // settingsContainer.style.color = "white";
-    settingsContainer.style.display = "none"; // Hidden by default
+    settingsContainer.style.display = "none";
     settingsContainer.style.zIndex = "11";
 
     fullscreenSettings.appendChild(settingsContainer);
     document.body.appendChild(fullscreenSettings);
-
-    // Reset individual styles for button & settings containers
-    // buttonContainer.style.position = "static";
-    // settingsContainer.style.position = "static";
-
-    // buttonContainer.style.display = "flex";
-    // buttonContainer.style.alignItems = "center";
 
     labels.forEach((label) => (label.style.color = "white"));
 
@@ -207,12 +182,6 @@ function toggleFullscreen() {
     // Remove the fullscreen container
     let fullscreenSettings = document.getElementById("fullscreen-ui");
     if (fullscreenSettings) fullscreenSettings.remove();
-
-    // let buttonContainer = document.getElementById("button-container");
-    // buttonContainer.style.position = "";
-
-    // buttonContainer.style.opacity = "1"; // Ensure visibility
-    // settingsContainer.style.opacity = "1";
 
     settingsContainer.style.display = "flex"; // Restore adjust settings visibility
     buttonContainer.style.opacity = "1";

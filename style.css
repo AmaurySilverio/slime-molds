@@ -5,10 +5,6 @@ html, body {
   margin: 0;
   padding: 0;
 }
-/* h1 a{
-  text-decoration: none;
-  color: black;
-} */
 h1{
   cursor: pointer;
 }
@@ -41,20 +37,8 @@ body{
   flex-direction: column;
   align-items: center;
 }
-/* #canvas-container {
-  width: 600px;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
+
 canvas {
-  /* width: 100%; */
-  /* height: auto; */
-  /* max-width: 600px;
-  max-height: 400px;
-  min-width: 320px;
-  min-height: 213.333px; */
   margin-bottom: 20px;
   aspect-ratio: 3 / 2;
   transition: all 0.1s ease; 
