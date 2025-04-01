@@ -116,6 +116,11 @@ select{
     justify-content: space-evenly;
   }
 }
+@media screen and (max-width:500px) {
+  #info-dialog{
+    height: 80%;
+  }
+}
 @media screen and (max-width:366px) {
   button{
     font-size: 12px;
